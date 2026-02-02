@@ -10,3 +10,8 @@ mistralai>=0.1
 tiktoken>=0.5
 # FAISS is optional; skip on Windows where binary wheels are limited
 faiss-cpu>=1.7; platform_system != "Windows"
+fastapi>=0.115
+uvicorn[standard]>=0.40
+motor>=3.6
+python-multipart>=0.0.9
+pydantic-settings>=2.4
