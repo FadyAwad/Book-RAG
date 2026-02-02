@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from .settings import Settings
 from ..vector_db.mongo_client import MongoClientManager
+from .messages import Messages, MessageKey
 
 class AppServer:
     def __init__(self):
@@ -30,4 +31,4 @@ class AppServer:
     def _register_routes(self):
         @self._app.get("/health")
         async def health():
-            return {"status": "ok"}
+            return {"status": Messages.get(MessageKey.HEALTH_OK)}
