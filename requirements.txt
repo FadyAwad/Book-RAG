@@ -1,0 +1,12 @@
+langchain>=0.2
+langchain-community>=0.2
+sentence-transformers>=2.6
+chromadb>=0.5
+pypdf>=4.0
+pdfplumber>=0.11
+python-dotenv>=1.0
+openai>=1.0
+mistralai>=0.1
+tiktoken>=0.5
+# FAISS is optional; skip on Windows where binary wheels are limited
+faiss-cpu>=1.7; platform_system != "Windows"
