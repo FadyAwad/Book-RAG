@@ -1,5 +1,9 @@
 # Book-RAG
 
+<p align="center">
+  <img src="ALPHAAI.png" alt="ALPHAAI" width="200">
+</p>
+
 RAG system for book understanding, question answering, summarization, and video generation. Upload a book (PDF/TXT), ingest it into chunks, embed them, store in a vector-enabled datastore, and query with an LLM-backed pipeline.
 
 ## Features
