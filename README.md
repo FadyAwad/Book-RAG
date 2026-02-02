@@ -41,6 +41,9 @@ RAG system for book understanding, question answering, summarization, and video 
 ## Project Structure
 ```
 project/
+  Docker/
+    Dockerfile
+    docker-compose.yml
   data/
   ingestion/
   embeddings/
@@ -69,11 +72,11 @@ OPENAI_API_KEY=
 MISTRAL_API_KEY=
 ```
 - For local (without Docker), you can use `MONGODB_URI=mongodb://localhost:27017`
-- `.env` is ignored by git
+- `.env` is ignored by git and is loaded automatically by the app and by docker-compose via `env_file`
 
 ## Quickstart (Docker)
 ```
-docker compose up --build
+docker compose -f project/Docker/docker-compose.yml up --build
 ```
 - API: http://localhost:8000
 - Health: http://localhost:8000/health
