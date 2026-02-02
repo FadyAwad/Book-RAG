@@ -4,9 +4,8 @@ services:
     build: .
     ports:
       - "8000:8000"
-    environment:
-      - MONGODB_URI=mongodb://mongo:27017
-      - MONGODB_DB=bookrag
+    env_file:
+      - .env
     depends_on:
       - mongo
   mongo:
