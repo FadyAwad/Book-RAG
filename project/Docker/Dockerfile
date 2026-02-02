@@ -1,5 +1,6 @@
 FROM python:3.12-slim
 WORKDIR /app
+# Build context is repository root via docker-compose; these paths resolve correctly
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY project ./project
